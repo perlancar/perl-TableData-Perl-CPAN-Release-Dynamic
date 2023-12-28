@@ -1,3 +1,10 @@
+0.002   2023-12-28  Released-By: PERLANCAR; Urgency: low
+
+        - No data changes.
+
+        - [doc] Mention TableData::Perl::CPAN::Release::Static.
+
+
 0.001   2023-12-28  Released-By: PERLANCAR
 
         - First release.
