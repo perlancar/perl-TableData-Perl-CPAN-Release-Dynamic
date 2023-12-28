@@ -76,3 +76,8 @@ with 'TableDataRole::Perl::CPAN::Release::Dynamic';
 =head1 TABLEDATA NOTES
 
 The data is retrieved dynamically from MetaCPAN.
+
+
+=head1 SEE ALSO
+
+L<TableData::Perl::CPAN::Release::Static>
