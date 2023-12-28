@@ -6,6 +6,9 @@ use 5.010001;
 use strict;
 use warnings;
 
+use App::MetaCPANUtils;
+use DateTime::Format::ISO8601;
+
 use Role::Tiny;
 with 'TableDataRole::Source::AOH';
 with 'TableDataRole::Util::CSV';
@@ -34,15 +37,12 @@ around new => sub {
     my $orig = shift;
     my ($self, %args) = @_;
 
-    require App::MetaCPANUtils;
     my $from_date = $args{from_date};
     if (!ref($from_date)) {
-        require DateTime::Format::ISO8601;
         $from_date = DateTime::Format::ISO8601->parse_datetime($from_date);
     }
     my $to_date = $args{to_date};
     if (!ref($to_date)) {
-        require DateTime::Format::ISO8601;
         $to_date = DateTime::Format::ISO8601->parse_datetime($to_date);
     }
     my $res = App::MetaCPANUtils::list_metacpan_releases(
