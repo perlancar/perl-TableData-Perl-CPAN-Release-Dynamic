@@ -73,6 +73,14 @@ with 'TableDataRole::Perl::CPAN::Release::Dynamic';
 1;
 # ABSTRACT: CPAN releases
 
+=head1 SYNOPSIS
+
+From the command-line (requires the CLI L<tabledata> from L<App::tabledata>):
+
+ # Show 2023-12-28 releases:
+ % tabledata Perl::CPAN::Release::Dynamic=from_date,2023-12-28,to_date,2023-12-28
+
+
 =head1 TABLEDATA NOTES
 
 The data is retrieved dynamically from MetaCPAN.
